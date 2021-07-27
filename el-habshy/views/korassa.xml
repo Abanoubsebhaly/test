@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <record id="korassa_tree" model="ir.ui.view">
+            <field name="name">korass_elshorot.tree</field>
+            <field name="model">elhabshy.korass_elshorot</field>
+            <field name="arch" type="xml">
+             <tree>
+            <field name="name" />
+            <field name="age" />
+            <field name="gender" />
+            <field name="Test" />
+            <field name="customar" />
+
+            </tree>
+            </field>
+        </record>
+        <record id="korassa_form" model="ir.ui.view">
+            <field name="name">korass_elshorot.form</field>
+            <field name="model">elhabshy.korass_elshorot</field>
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="age" />
+                            <field name="customar" />
+                        </group>
+                        <group>
+                        <field name="gender" />
+                        <field name="Test" />
+                        </group>
+                        <group>
+                        <field name="note" />
+                        </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    <record id="korassa_action" model="ir.actions.act_window">
+         <field name="name">korassa</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="res_model">elhabshy.korass_elshorot</field>
+         <field name="view_mode">kanban,tree,form</field>
+         <field name="help" type="html">
+             <p class="o_view_nocontent_smiling_face">
+                 Hi this is korasa 
+             </p>
+        </field >
+           
+    </record>
+
+        
+    <menuitem
+        id="habbashy_root_menu"
+        name="korasa"
+        sequence="10"/>
+    
+    <menuitem
+        id="korsa_menu"
+        name="كراسة الشروط"
+        parent="habbashy_root_menu"
+        action="korassa_action"
+         sequence="10"/>
+
+                
+                
+
+       
+
+
+    </data>
+</odoo>
